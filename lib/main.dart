@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/PAGE/ComputersPage.dart';
+import 'package:shopping_app/PAGE/CategoriesDesignPage.dart';
 import 'package:shopping_app/PAGE/HomePage.dart';
-import 'package:shopping_app/PAGE/LoginPage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +9,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/":(context)=> LoginPage(),
-        "/HomePage":(context)=>HomePage(),
-        "/Computers":(context)=>ComputerPage(),
-
+        "/":(context)=>HomePage(),
       },
     );
   }

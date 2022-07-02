@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopping_app/PAGE/CategoriesDesignPage.dart';
 
 Widget buildcategori({
   required String text,
@@ -7,7 +8,8 @@ Widget buildcategori({
 }){
   return GestureDetector(
     onTap: (){
-      Navigator.pushNamed(context!, "/$text");
+      Navigator.push(context!, MaterialPageRoute(builder: (context)=>CategoriesDesignPage(text)));
+
     },
     child: Container(
       width: double.infinity,

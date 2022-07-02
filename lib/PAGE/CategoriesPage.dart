@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/Components/BottomNavigation.dart';
+import 'package:shopping_app/Components/BottomNavigationBar.dart';
 import 'package:shopping_app/Components/Header.dart';
-import 'package:shopping_app/PAGE/ComputersPage.dart';
+import 'package:shopping_app/PAGE/CategoriesDesignPage.dart';
 import 'package:shopping_app/Components/BuildCategori.dart';
 
 class CategoriesPage extends StatefulWidget {
@@ -15,10 +15,9 @@ class _CategoriesPageState extends State<CategoriesPage> {
 final List<String> categories=[
   "All",
   "Computers",
-  "Accessories",
-  "Smartphone",
-  "Smart objects",
   "Speakers",
+  "Phone",
+
  ];
   @override
   Widget build(BuildContext context) {
@@ -44,7 +43,7 @@ final List<String> categories=[
                 ],
               ),
             ),
-            bottomNavigationBar(""),
+            bottomNavigationBar("serch", context)
           ],
         ),
       ),

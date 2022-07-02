@@ -1,10 +1,17 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'package:shopping_app/PAGE/HomePage.dart';
 
 
 import 'BuildNavIcon.dart';
 
-Widget bottomNavigationBar(String page){
+Widget bottomNavigationBar(
+    String page,
+    BuildContext context
+    ){
   return Align(
     alignment: Alignment.bottomCenter,
     child: Container(
@@ -22,7 +29,11 @@ Widget bottomNavigationBar(String page){
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          buildnavicon(active: page=="home", icon: FontAwesomeIcons.house, ),
+          GestureDetector(
+            onTap: (){
+              Navigator.pushReplacementNamed(context, "/");
+            },
+              child: buildnavicon(active: page=="home", icon: FontAwesomeIcons.house, )),
           buildnavicon(active: page=="serch", icon: FontAwesomeIcons.magnifyingGlass),
           buildnavicon(active: page=="cart", icon: FontAwesomeIcons.cartShopping),
           buildnavicon(active: page=="profile", icon: FontAwesomeIcons.person),

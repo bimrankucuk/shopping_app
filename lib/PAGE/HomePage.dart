@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:shopping_app/Components/BottomNavigation.dart';
+import 'package:shopping_app/Components/BottomNavigationBar.dart';
 import 'package:shopping_app/PAGE/CategoriesPage.dart';
 import '../Components/BuildBanner.dart';
 import '../Components/BuildBaslik.dart';
@@ -56,13 +56,6 @@ class _HomePageState extends State<HomePage> {
                   Center(child: Text("Sales",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24,color: Color(0xFF0A1034)),)),
                   SizedBox(height: 16,),
                   //sales items
-                  /*Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      buildsalesitems(text: "Smartphones", discount: "-50%", photourl: "images/phone.png", screenwidth: screenwidth),
-                      buildsalesitems(text: "Smartphones", discount: "-50%", photourl: "images/phone.png", screenwidth: screenwidth),
-                    ],
-                  ),*/
                  Expanded(
                    child: Padding(
                      padding: const EdgeInsets.only(bottom: 65),
@@ -79,7 +72,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             //button navigation bar
-            bottomNavigationBar("home"),
+            bottomNavigationBar("home", context)
           ],
         ),
       ),
